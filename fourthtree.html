@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <body>
+        <section>
+            <h1>Palm tree (Spring and Summer)</h1>
+            <a href="./index.html"><p>Christmas Season</p></a>
+            <a href="./firsttreepart2.html"><p>Christmas Season (When the wind is blowing)</p></a>
+            <a href="./secondtree.html"><p>Matariki</p></a>
+            <a href="./secondtreepart2.html"><p>Matariki (When the wind is blowing)</p></a>
+            <a href="./thirdtree.html"><p>Normal time of the year (Autumn and Winter)</p></a>
+            <a href="./fifthtree.html"><p>Normal time of the year (When the wind is blowing)</p></a>
+        </section>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generative Art Trees</title>
+  <style>
+    body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #87CEEB; /* Sky Blue */
+}
+
+.tree-container {
+  margin-top: 20px; /* Add some top margin for better visibility */
+}
+
+.tree {
+  position: relative;
+}
+
+section {
+  align-self: flex-start; /* Align section to the top left */
+  text-align: left;
+  margin-left: 20px; /* Add some left margin for better visibility */
+}
+
+section h1,
+section p {
+  margin: 0; /* Remove default margins for h1 and p */
+}
+
+.trunk {
+  width: 30px;
+  height: 200px;
+  background-color: #8B4513; /* Saddle Brown */
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.leaves {
+  position: absolute;
+  bottom: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  animation: grow 3s ease-in-out forwards;
+}
+
+.leaf {
+  width: 120px;
+  height: 120px;
+  background-color: #228B22; /* Forest Green */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.leaf:nth-child(2) {
+  transform: translateX(-50%) translateY(-40%) rotate(45deg);
+  animation-delay: 0.5s;
+}
+
+.leaf:nth-child(3) {
+  transform: translateX(-50%) translateY(-40%) rotate(-45deg);
+  animation-delay: 1s;
+}
+
+.leaf:nth-child(4) {
+  transform: translateX(-50%) translateY(-70%) rotate(90deg);
+  animation-delay: 1.5s;
+}
+
+.leaf:nth-child(5) {
+  transform: translateX(-50%) translateY(-70%) rotate(-90deg);
+  animation-delay: 2s;
+}
+
+@keyframes grow {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+.light {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: twinkle 1s infinite alternate;
+}
+
+.light:nth-child(6) {
+  top: 120px;
+  left: 30%;
+  background-color: yellow;
+} /* Yellow light */
+
+.light:nth-child(7) {
+  top: 140px;
+  left: 70%;
+  background-color: blue;
+} /* Blue light */
+
+.light:nth-child(8) {
+  top: 160px;
+  left: 45%;
+  background-color: green;
+} /* Green light */
+
+.light:nth-child(9) {
+  top: 180px;
+  left: 55%;
+  background-color: red;
+} /* Red light */
+
+.light:nth-child(10) {
+  top: 200px;
+  left: 55%;
+  background-color: orange;
+} /* Orange light */
+
+.light:nth-child(11) {
+  top: 220px;
+  left: 55%;
+  background-color: white;
+} /* White light */
+
+.light:nth-child(12) {
+  top: 240px;
+  left: 55%;
+  background-color: purple;
+} /* Purple light */
+
+
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+  </style>
+</head>
+<body>
+
+<div class="tree">
+  <div class="trunk"></div>
+  <div class="leaves">
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generative Art Trees</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color:  #87CEEB;
+    }
+
+    .tree-container {
+      margin-top: 20px; /* Add some top margin for better visibility */
+    }
+
+    .tree {
+      position: relative;
+      width: 0;
+      height: 0;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 150px solid #228B22; /* Green color for tree */
+    }
+
+    section {
+      align-self: flex-start; /* Align section to the top left */
+      text-align: left;
+      margin-left: 20px; /* Add some left margin for better visibility */
+    }
+
+    section h1, section p {
+      margin: 0; /* Remove default margins for h1 and p */
+    }
+
+
+    .leaf {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 50px solid #228B22; /* Green color for leaves */
+      top: -60px;
+      left: 50%;
+      margin-left: -30px;
+    }
+
+    .leaf2 {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-bottom: 60px solid #228B22; /* Green color for leaves */
+      top: -40px;
+      left: 50%;
+      margin-left: -40px;
+    }
+
+    .leaf3 {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+      border-bottom: 90px solid #228B22; /* Green color for leaves */
+      top: -25px;
+      left: 50%;
+      margin-left: -60px;
+    }
+
+    .leaf4 {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 80px solid transparent;
+      border-right: 80px solid transparent;
+      border-bottom: 122.5px solid #228B22; /* Green color for leaves */
+      top: -15px;
+      left: 50%;
+      margin-left: -80px;
+    }
+
+    .trunk {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: #8B4513; /* Brown color for trunk */
+      top: 150px;
+      left: 50%;
+      margin-left: -20px;
+    }
+
+    .light {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      animation: twinkle 1s infinite alternate, float 2s infinite alternate;
+    }
+
+    .light:nth-child(6) { top: 0px; left: 30%; background-color: yellow; } /* Yellow light */
+    .light:nth-child(7) { top: 20px; left: 70%; background-color: blue; } /* Blue light */
+    .light:nth-child(8) { top: 40px; left: 45%; background-color: green; } /* Green light */
+    .light:nth-child(9) { top: 60px; left: 55%; background-color: red; } /* Red light */
+    .light:nth-child(10) { top: 80px; left: 55%; background-color: orange; } /* Orange light */
+    .light:nth-child(11) { top: 100px; left: 55%; background-color: white; } /* White light */
+    .light:nth-child(12) { top: 120px; left: 55%; background-color: purple; } /* Purple light */
+
+    .star {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      background-color: #FFD700; /* Yellow color for the star */
+      top:-75px;
+      left: 50%;
+      margin-left: -10px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-20px); }
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.8; }
+      100% { opacity: 1; }
+    }
+
+  </style>
+</head>
+<body>
+  <section>
+    <h1>Christmas Tree</h1>
+    <a href="./firsttreepart2.html"><p>Christmas Season (When the wind is blowing)</p></a>
+    <a href="./secondtree.html"><p>Matariki</p></a>
+    <a href="./secondtreepart2.html"><p>Matariki (When the wind is blowing)</p></a>
+    <a href="./thirdtree.html"><p>Normal time of the year (Autumn and Winter)</p></a>
+    <a href="./fourthtree.html"><p>Normal time of the year (Spring and Summer)</p></a>
+    <a href="./fifthtree.html"><p>Normal time of the year (When the wind is blowing)</p></a>
+  </section>
+
+  
+  <div class="tree">
+    <div class="leaf"></div>
+    <div class="leaf2"></div>
+    <div class="leaf3"></div>
+    <div class="leaf4"></div>
+    <div class="trunk"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="star"></div>
+  </div>
+</body>
+</html>
